@@ -29,6 +29,6 @@ public class FileData {
                 "name='" + name + "\'" +
                 ", size=" + size +
                 ", path='" + path + "\'" +
-                "} \n";
+                "}";
     }
 }
