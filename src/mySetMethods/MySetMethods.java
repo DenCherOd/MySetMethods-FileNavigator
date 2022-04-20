@@ -1,0 +1,26 @@
+package mySetMethods;
+
+import java.util.*;
+
+public class MySetMethods {
+    public LinkedHashSet<String> convertToUnique(ArrayList<String> userList) {
+        LinkedHashSet<String> uniqueSet = new LinkedHashSet<>(userList);
+        return uniqueSet;
+    }
+
+    public TreeSet<Integer> getSortedIntegerASC(ArrayList<Integer> userList) {
+        TreeSet<Integer> sortedSet = new TreeSet<>(userList);
+        return sortedSet;
+    }
+
+    public LinkedHashSet<Integer> getSortedUniqueIntegerDESC(ArrayList<Integer> userList) {
+        Collections.sort(userList, Collections.reverseOrder());
+        LinkedHashSet<Integer> reverseSortedSet = new LinkedHashSet<>(userList);
+        return reverseSortedSet;
+    }
+
+    public LinkedHashSet<String> buildSentenceDirection(String[] userArray) {
+        LinkedHashSet<String> uniqueStringSet = new LinkedHashSet<>(Arrays.asList(userArray));
+        return uniqueStringSet;
+    }
+}
