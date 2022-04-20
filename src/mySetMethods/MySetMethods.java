@@ -4,21 +4,18 @@ import java.util.*;
 
 public class MySetMethods {
     public LinkedHashSet<String> convertToUnique(ArrayList<String> userList) {
-        LinkedHashSet<String> uniqueSet = new LinkedHashSet<>();
-        uniqueSet.addAll(userList);
+        LinkedHashSet<String> uniqueSet = new LinkedHashSet<>(userList);
         return uniqueSet;
     }
 
     public TreeSet<Integer> getSortedIntegerASC(ArrayList<Integer> userList) {
-        TreeSet<Integer> sortedSet = new TreeSet<>();
-        sortedSet.addAll(userList);
+        TreeSet<Integer> sortedSet = new TreeSet<>(userList);
         return sortedSet;
     }
 
     public LinkedHashSet<Integer> getSortedUniqueIntegerDESC(ArrayList<Integer> userList) {
-        LinkedHashSet<Integer> reverseSortedSet = new LinkedHashSet<>();
         Collections.sort(userList, Collections.reverseOrder());
-        reverseSortedSet.addAll(userList);
+        LinkedHashSet<Integer> reverseSortedSet = new LinkedHashSet<>(userList);
         return reverseSortedSet;
     }
 
